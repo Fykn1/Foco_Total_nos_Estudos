@@ -1,0 +1,55 @@
+.div_Desafios {
+  background-color: rgb(31, 41, 55);
+  color: white;
+  height: 115px;
+  width: 460px;
+  border-radius: 10px;
+  display: table;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 3.5fr 1fr 2fr;
+  margin-top: 35px;
+}
+
+.div_p_Desafios_e_Datas {
+  display: grid;
+  grid-template-columns: 9fr 8fr;
+  padding-top: 20px;
+}
+
+#p_Desafios {
+  width: auto;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  transform: scale(1.03, 1.05);
+}
+
+#p_Datas {
+  color: rgb(151, 158, 171);
+  width: auto;
+  font-size: 14px;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 18px;
+}
+
+#div_BarraDeProgresso {
+  background-color: rgb(55, 65, 81);
+  height: 12px;
+  width: 420px;
+  border-radius: 10px;
+  align-self: center;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+#p_Progresso {
+  color: rgb(151, 158, 171);
+  width: auto;
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: right;
+  padding-right: 23px;
+}

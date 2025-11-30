@@ -1,0 +1,35 @@
+.div_Tarefas {
+  background-color: rgb(31, 41, 55);
+  color: white;
+  height: auto;
+  width: 460px;
+  border-radius: 10px;
+  display: table;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  margin-top: 35px;
+}
+
+.button_Tarefas button {
+  background-color: rgb(55, 65, 81);
+  color: white;
+  height: 45px;
+  width: 430px;
+  font-size: 17px;
+  font-weight: lighter;
+  text-align: left;
+  border: none;
+  border-radius: 8px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#p_Tarefa1 {
+  margin-top: 25px;
+}
+
+#p_Tarefa5 {
+  margin-bottom: 25px;
+}

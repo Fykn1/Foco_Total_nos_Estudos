@@ -1,0 +1,74 @@
+.div_Pontos_e_Nivel {
+  background-color: rgb(31, 41, 55);
+  color: white;
+  height: 105px;
+  width: 370px;
+  border-radius: 10px;
+  display: table;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 60px 1px 44px;
+  margin-top: 25px;
+}
+
+.div_p_Pontos_e_Nivel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.div_Pontos {
+  text-align: center;
+  padding-top: 8px;
+  padding-left: 90px;
+}
+
+#p_Pontos {
+  color: rgb(255, 188, 18);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#numero_Pontos {
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.div_Nivel {
+  text-align: center;
+  padding-top: 8px;
+  padding-right: 90px;
+}
+
+#p_Nivel {
+  color: rgb(18, 202, 187);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#numero_Nivel {
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+#p_Exp {
+  height: 0px;
+  font-size: 0px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#div_BarraDeExp {
+  background-color: rgb(55, 65, 81);
+  height: 8px;
+  width: 340px;
+  border-radius: 10px;
+  text-align: center;
+  display: table;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+#div_BarraDeExp:hover ~ #p_Exp {
+  font-size: 12px;
+}
