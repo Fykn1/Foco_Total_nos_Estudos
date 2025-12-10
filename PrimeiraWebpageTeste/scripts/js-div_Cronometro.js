@@ -18,15 +18,15 @@ function Cronometra() {
   let s = Number(p_Tempo.innerHTML.slice(6));
 
   if (s < 59) {
-  s += 1;
+  s++;
 
   } else {
     s = 0;
-    m += 1;
+    m++;
 
     if (m > 59) {
       m = 0;
-      h += 1;            
+      h++;            
     }
   }
 
@@ -86,3 +86,4 @@ function play_button() {
     img_Play.style.opacity = "0"
   }
 }
+
