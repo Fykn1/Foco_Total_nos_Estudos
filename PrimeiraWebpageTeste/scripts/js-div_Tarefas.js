@@ -6,6 +6,8 @@ function concluir_Tarefas(N) {
 
   button_Tarefas.classList.toggle('Concluida');
 
+  console.log(button_Tarefas);
+
   if (!button_Tarefas.classList[2]) {
     button_Tarefas.style.backgroundColor = "rgb(55, 65, 81)";
     img_Checkbutton.style.opacity = "0";
@@ -20,6 +22,26 @@ function concluir_Tarefas(N) {
     p_Tarefas.style.textDecoration = "line-through";
     p_Tarefas.style.textDecorationThickness = "1.5px";
     p_MaisPontos.style.opacity = "0";
+  }
+}
+
+function Hover(N) {
+  const button_Tarefas = document.querySelector('.js-button_Tarefa' + N);
+
+  if (!button_Tarefas.classList[2]) {
+    button_Tarefas.style.backgroundColor = "rgb(151, 158, 171, 0.5)";
+  } else {
+    button_Tarefas.style.backgroundColor = "rgb(15, 151, 97, 0.62)"
+  }
+}
+
+function desHover(N) {
+  const button_Tarefas = document.querySelector('.js-button_Tarefa' + N);
+
+  if (!button_Tarefas.classList[2]) {
+    button_Tarefas.style.backgroundColor = "rgb(55, 65, 81)";
+  } else {
+    button_Tarefas.style.backgroundColor = "rgb(4, 81, 50)"
   }
 }
 
