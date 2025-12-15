@@ -5,7 +5,7 @@
   border-radius: 10px;
   display: grid;
   grid-template-rows: auto;
-  padding-top: 10px;
+  padding-top: 14px;
   padding-bottom: 22px;
   margin: 0 auto;
   margin-top: 15px;
@@ -24,7 +24,7 @@
   display: grid;
   grid-template-columns: 0 20px 345px 30px;
   margin: 0 auto;
-  margin-top: 12px;
+  margin-top: 8px;
   cursor: pointer;
 }
 
@@ -55,4 +55,55 @@
   text-align: center;
   padding-top: 16px;
   margin: 0 auto;
+}
+
+.div_Adicionar_Tarefa {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-self: center;
+  margin-top: 15px;
+}
+
+.input_Adicionar_Tarefa {
+  background-color: rgb(55, 65, 81);
+  color: white;
+  height: 50px;
+  width: 340px;
+  font-size: 16.5px;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 0 0 20px;
+  cursor: text;
+}
+
+.input_Adicionar_Tarefa:hover {
+  background-color: rgb(151, 158, 171, 0.5);
+}
+
+::placeholder {
+  color: rgb(151, 158, 171);
+  font-size: 16px;
+}
+
+.button_Adicionar_Tarefa {
+  background-color: rgb(18, 202, 187);
+  color: white;
+  height: 50px;
+  font-size: 50px;
+  font-family: cursive;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.button_Adicionar_Tarefa:hover {
+ background-color: rgb(18, 202, 187, 0.7);
+}
+
+.img_Mais {
+  height: 20px;
+  padding: 1px 1px 0 0;
 }

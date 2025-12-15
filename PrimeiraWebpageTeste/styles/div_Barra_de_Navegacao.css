@@ -63,14 +63,16 @@
   align-items: center;
   display: grid;
   grid-template-columns: 0 1fr;
+  transition: background-color 0.2s;
 }
 
 .button_Calendario:hover {
-  background-color: rgb(18, 202, 187, 0.0);
+  background-color: rgb(18, 202, 187, 0.2);
 }
 
 .button_Calendario:hover > .img_Calendario_Hover {
   opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .button_Calendario:active {
@@ -94,14 +96,16 @@
   align-items: center;
   display: grid;
   grid-template-columns: 0 1fr;
+  transition: background-color 0.2s;
 }
 
 .button_Configuracao:hover {
-  background-color: rgb(18, 202, 187, 0.0);
+  background-color: rgb(18, 202, 187, 0.2);
 }
 
 .button_Configuracao:hover > .img_Configuracao_Hover {
   opacity: 1;
+  transition: opacity 0.2s;
 }
 
 .button_Configuracao:active {

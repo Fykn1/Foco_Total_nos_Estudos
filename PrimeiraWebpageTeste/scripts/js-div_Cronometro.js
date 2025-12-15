@@ -1,14 +1,14 @@
+document.querySelector('.js-p_Tempo').innerHTML = localStorage.getItem('p_Tempo') || '00:00:00';
+
 function cronometrar_div_Cronometro() {
-  play_button();
-  cronometro_p_Tempo();
+  atualiza_button();
+  cronometro();
 }
 
 function reseta() {
-  document.querySelector('.js-p_Tempo').innerHTML = '00:00:00'
+  document.querySelector('.js-p_Tempo').innerHTML = '00:00:00';
   localStorage.removeItem('p_Tempo');
 }
-
-document.querySelector('.js-p_Tempo').innerHTML = localStorage.getItem('p_Tempo') || '00:00:00';
 
 function Cronometra() {
   let p_Tempo = document.querySelector('.js-p_Tempo');
@@ -52,7 +52,7 @@ function Cronometra() {
   localStorage.setItem('p_Tempo', p_Tempo.innerHTML);
 } 
 
-function cronometro_p_Tempo() {
+function cronometro() {
   const p_Play = document.querySelector('.js-p_Play').innerHTML;
 
   if (p_Play === 'Continuar') {
@@ -64,7 +64,7 @@ function cronometro_p_Tempo() {
   }
 }
 
-function play_button() {
+function atualiza_button() {
   const button_Play = document.querySelector('.js-button_Iniciar');
   const img_Play = document.querySelector('.js-img_Play');
   const img_Pause = document.querySelector('.js-img_Pause');
@@ -86,4 +86,3 @@ function play_button() {
     img_Play.style.opacity = "0"
   }
 }
-

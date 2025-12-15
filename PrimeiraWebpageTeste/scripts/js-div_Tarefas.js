@@ -6,8 +6,6 @@ function concluir_Tarefas(N) {
 
   button_Tarefas.classList.toggle('Concluida');
 
-  console.log(button_Tarefas);
-
   if (!button_Tarefas.classList[2]) {
     button_Tarefas.style.backgroundColor = "rgb(55, 65, 81)";
     img_Checkbutton.style.opacity = "0";
@@ -30,6 +28,7 @@ function Hover(N) {
 
   if (!button_Tarefas.classList[2]) {
     button_Tarefas.style.backgroundColor = "rgb(151, 158, 171, 0.5)";
+  
   } else {
     button_Tarefas.style.backgroundColor = "rgb(15, 151, 97, 0.62)"
   }
@@ -40,19 +39,26 @@ function desHover(N) {
 
   if (!button_Tarefas.classList[2]) {
     button_Tarefas.style.backgroundColor = "rgb(55, 65, 81)";
+
   } else {
     button_Tarefas.style.backgroundColor = "rgb(4, 81, 50)"
   }
 }
 
-function add() {
-  let adiciona = document.querySelector('.js-add');
+function adicionar_Tarefas() {
+  let adiciona = document.querySelector('.js-div_Tarefas');
   console.log(adiciona);
   adiciona.innerHTML += 
-    `<button class="button_Tarefas js-button_Tarefas" onclick="concluir_Tarefas()">
+    `<button class="button_Tarefas js-button_Tarefa${undefined}" onclick="concluir_Tarefas()">
       <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
-      <img class="img_Checkbutton js-img_Checkbutton" src="Imagens/Checkbutton.png">
-      <p class="p_Tarefas js-p_Tarefas">${undefined}</p>
-      <p class="p_MaisPontos js-p_MaisPontos">${undefined}</p>
+      <img class="img_Checkbutton js-img_Checkbutton${undefined}" src="Imagens/Checkbutton.png">
+      <p class="p_Tarefas js-p_Tarefas${undefined}">${undefined}</p>
+      <p class="p_MaisPontos js-p_MaisPontos${undefined}">${undefined}</p>
     </button>`;
+}
+
+function Teste() {
+  let object = {
+
+  }
 }

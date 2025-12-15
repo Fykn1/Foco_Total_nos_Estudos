@@ -4,7 +4,7 @@
   width: 370px;
   border-radius: 10px;
   display: grid;
-  grid-template-rows: 60px 1px 44px;
+  grid-template-rows: 60px 0 1px 44px;
   margin: 0 auto;
   margin-top: 25px;
 }
@@ -59,12 +59,15 @@
   height: 8px;
   width: 340px;
   border-radius: 10px;
-  text-align: center;
   display: table;
   margin: 0 auto;
   margin-top: 12px;
 }
 
-.div_BarraDeExp:hover > .p_Exp {
-  font-size: 12px;
+.div_BarraDeExp_Concluido {
+  background-color: rgb(255, 188, 18);
+  height: 8px;
+  width: 0;
+  border-radius: 10px;
+  transition: width 0.2s;
 }

@@ -40,16 +40,17 @@
         <div class="div_p_Pontos_e_Nivel">
           <div class="div_Pontos">
             <p class="p_Pontos">PONTOS</p>
-            <p class="numero_Pontos">0</p>
+            <p class="numero_Pontos js-numero_Pontos">0</p>
           </div>
           <div class="div_Nivel">
             <p class="p_Nivel">NÍVEL</p>
-            <p class="numero_Nivel">1</p>
+            <p class="numero_Nivel js-numero_Nivel">1</p>
           </div>
         </div>
         <div class="div_BarraDeExp">
+          <div class="div_BarraDeExp_Concluido js-div_BarraDeExp_Concluido">
           <p class="p_Exp">0 / 50</p>
-        </div>
+        </div></div>
       </div>
       
       <div class="div_Desafios_de_Hoje">
@@ -64,37 +65,51 @@
       </div>
 
       <div class="div_Tarefas js-div_Tarefas">
-        <button class="button_Tarefas js-button_Tarefa1" onclick="concluir_Tarefas(1)" onmouseover="Hover(1)" onmouseleave="desHover(1)">
+        <button class="button_Tarefas js-button_Tarefa1" onclick="concluir_Tarefas(1); mudar_div_Pontos_e_Nivel(1)" onmouseover="Hover(1)" onmouseleave="desHover(1)">
           <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
           <img class="img_Checkbutton js-img_Checkbutton1" src="Imagens/Checkbutton.png">
           <p class="p_Tarefas js-p_Tarefas1">Estude no mínimo 8h diárias</p>
           <p class="p_MaisPontos js-p_MaisPontos1">+20</p>
         </button>
-        <button class="button_Tarefas js-button_Tarefa2" onclick="concluir_Tarefas(2)" onmouseover="Hover(2)" onmouseleave="desHover(2)">
+        <button class="button_Tarefas js-button_Tarefa2" onclick="concluir_Tarefas(2); mudar_div_Pontos_e_Nivel(2)" onmouseover="Hover(2)" onmouseleave="desHover(2)">
           <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
           <img class="img_Checkbutton js-img_Checkbutton2" src="Imagens/Checkbutton.png">
           <p class="p_Tarefas js-p_Tarefas2">Estude no mínimo 3h30 sem interrupções</p>
           <p class="p_MaisPontos js-p_MaisPontos2">+10</p>
         </button>
-        <button class="button_Tarefas js-button_Tarefa3" onclick="concluir_Tarefas(3)" onmouseover="Hover(3)" onmouseleave="desHover(3)">
+        <button class="button_Tarefas js-button_Tarefa3" onclick="concluir_Tarefas(3); mudar_div_Pontos_e_Nivel(3)" onmouseover="Hover(3)" onmouseleave="desHover(3)">
           <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
           <img class="img_Checkbutton js-img_Checkbutton3" src="Imagens/Checkbutton.png">
           <p class="p_Tarefas js-p_Tarefas3">Resolva uma lista de exercícios</p>
           <p class="p_MaisPontos js-p_MaisPontos3">+10</p>
         </button>
-        <button class="button_Tarefas js-button_Tarefa4" onclick="concluir_Tarefas(4)" onmouseover="Hover(4)" onmouseleave="desHover(4)">
+        <button class="button_Tarefas js-button_Tarefa4" onclick="concluir_Tarefas(4); mudar_div_Pontos_e_Nivel(4)" onmouseover="Hover(4)" onmouseleave="desHover(4)">
           <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
           <img class="img_Checkbutton js-img_Checkbutton4" src="Imagens/Checkbutton.png">
           <p class="p_Tarefas js-p_Tarefas4">Levante da cama antes das 7:00</p>
           <p class="p_MaisPontos js-p_MaisPontos4">+5</p>
         </button>
-        <button class="button_Tarefas js-button_Tarefa5" onclick="concluir_Tarefas(5)" onmouseover="Hover(5)" onmouseleave="desHover(5)">
+        <button class="button_Tarefas js-button_Tarefa5" onclick="concluir_Tarefas(5); mudar_div_Pontos_e_Nivel(5)" onmouseover="Hover(5)" onmouseleave="desHover(5)">
           <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
           <img class="img_Checkbutton js-img_Checkbutton5" src="Imagens/Checkbutton.png">
           <p class="p_Tarefas js-p_Tarefas5">Diminua o tempo de tela</p>
           <p class="p_MaisPontos js-p_MaisPontos5">+5</p>
         </button>
+        <button class="button_Tarefas js-button_Tarefa6" onclick="concluir_Tarefas(6); mudar_div_Pontos_e_Nivel(6)" onmouseover="Hover(6)" onmouseleave="desHover(6)">
+          <img class="img_Checkbutton_Borda" src="Imagens/Checkbutton_Borda.png">
+          <img class="img_Checkbutton js-img_Checkbutton6" src="Imagens/Checkbutton.png">
+          <p class="p_Tarefas js-p_Tarefas6">Undefined</p>
+          <p class="p_MaisPontos js-p_MaisPontos6">+40</p>
+        </button>
+        <div class="div_Adicionar_Tarefa">
+          <input class="input_Adicionar_Tarefa" placeholder="Adicionar tarefa">
+          <button class="button_Adicionar_Tarefa">
+            <img class="img_Mais" src="Imagens/Mais.png">
+          </button>
+          
+        </div>
       </div>
+      
 
       <div class="div_Cronometro">
         <p class="p_Cronometro">Cronômetro</p>
@@ -107,6 +122,7 @@
       </div>
     </div>
 
+    <script src="scripts/js-div_Pontos_e_Nivel.js"></script>
     <script src="scripts/js-div_Tarefas.js"></script>
     <script src="scripts/js-div_Cronometro.js"></script>
   </body>
