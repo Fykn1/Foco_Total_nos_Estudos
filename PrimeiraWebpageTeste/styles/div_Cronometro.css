@@ -7,6 +7,7 @@
   grid-template-rows: 50px 70px 50px;
   margin: 0 auto;
   margin-top: 15px;
+  cursor: default;
 }
 
 .p_Cronometro {

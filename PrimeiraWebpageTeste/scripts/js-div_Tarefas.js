@@ -56,9 +56,3 @@ function adicionar_Tarefas() {
       <p class="p_MaisPontos js-p_MaisPontos${undefined}">${undefined}</p>
     </button>`;
 }
-
-function Teste() {
-  let object = {
-
-  }
-}

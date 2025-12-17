@@ -1,9 +1,9 @@
-document.querySelector('.js-p_Tempo').innerHTML = localStorage.getItem('p_Tempo') || '00:00:00';
-
 function cronometrar_div_Cronometro() {
   atualiza_button();
   cronometro();
 }
+
+document.querySelector('.js-p_Tempo').innerHTML = localStorage.getItem('p_Tempo') || '00:00:00';
 
 function reseta() {
   document.querySelector('.js-p_Tempo').innerHTML = '00:00:00';
