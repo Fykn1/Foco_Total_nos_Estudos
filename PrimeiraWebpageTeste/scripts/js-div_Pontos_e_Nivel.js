@@ -37,6 +37,18 @@ function aumenta_Pontos(N) {
     } else if (Nivel.innerHTML < 15) {
       Width -= 2 * p_MaisPontos;
     
+    } else if (Nivel.innerHTML == 15) {
+      let QtdsDe5Total, QtdsDe5DepoisDe600, QtdsDe5AntesDe600 = 0;
+
+      QtdsDe5Total = p_MaisPontos / 5;
+
+      if (Pontos_Total < 600) {
+        QtdsDe5AntesDe600 = (600 - Pontos_Total) / 5;
+      }
+      QtdsDe5DepoisDe600 = QtdsDe5Total - QtdsDe5AntesDe600;
+
+      Width -= (QtdsDe5AntesDe600 * 10 + QtdsDe5DepoisDe600 * 5);
+
     } else if (Nivel.innerHTML < 30) {
       Width -= p_MaisPontos;
     }
@@ -58,9 +70,20 @@ function aumenta_Pontos(N) {
 
       Width += QtdsDe5AntesDe100 * 20 + QtdsDe5DepoisDe100 * 10;
 
-    } else if (Nivel.innerHTML < 15) {
+    } else if (Nivel.innerHTML < 14) {
       Width += 2 * p_MaisPontos;
 
+    } else if (Nivel.innerHTML == 14) {
+      let QtdsDe5Total, QtdsDe5AntesDe600, QtdsDe5DepoisDe600 = 0;
+      QtdsDe5Total = p_MaisPontos / 5;
+
+      if (Pontos_Total > 600) {
+        QtdsDe5DepoisDe600 = (Pontos_Total - 600) / 5;
+      }
+      QtdsDe5AntesDe600 = QtdsDe5Total - QtdsDe5DepoisDe600;
+
+      Width += QtdsDe5AntesDe600 * 10 + QtdsDe5DepoisDe600 * 5;
+    
     } else if (Nivel.innerHTML < 30) {
       Width += p_MaisPontos;
     }
@@ -74,26 +97,39 @@ function aumenta_Nivel() {
   if (Pontos_Total < 25) {
     Nivel.innerHTML = 1;
   
-  } else if (Pontos_Total <= 100) {
-    for (let i = 1; i < 5; i++){  
+  } else if (Pontos_Total < 100) {
+    for (let i = 1; i < 4; i++){  
       if (Pontos_Total >= 25 * i && Pontos_Total < 25 * (i + 1)) {
         Nivel.innerHTML = `${i + 1}`;
       }
     }
   
-  } else if (Pontos_Total <= 600) {
-    for (let i = 2; i < 13; i++){  
+  } else if (Pontos_Total >= 100 && Pontos_Total < 150) {
+    Nivel.innerHTML = 5;
+    
+  } else if (Pontos_Total < 600) {
+    for (let i = 2; i < 12; i++){
       if (Pontos_Total >= 50 * i && Pontos_Total < 50 * (i + 1)) {
         Nivel.innerHTML = `${i + 3}`;
       }
     }
   
-  } else if (Pontos_Total <= 2100) {
+  } else if (Pontos_Total >= 600 && Pontos_Total < 700) {
+    Nivel.innerHTML = 15;
+
+  } else if (Pontos_Total < 2100) {
     for (let i = 7; i < 22; i++){  
       if (Pontos_Total >= 100 * i && Pontos_Total < 100 * (i + 1)) {
         Nivel.innerHTML = `${i + 9}`;
       }
     }
+  
+  } else if (Pontos_Total <= 4350) {
+      for (let i = 15; i < 29; i++){  
+        if (Pontos_Total >= 150 * i && Pontos_Total < 150 * (i + 1)) {
+          Nivel.innerHTML = `${i + 15}`;
+        }
+      }
   }
   localStorage.setItem('Nivel', Nivel.innerHTML);
 }
@@ -118,7 +154,7 @@ function atualiza_Barra_Pontos_e_Nivel() {
   } else if (Width < 100) {
     BarraDeExp.style.width = `${Width}%`;
 
-  } else if (Width === 100) {
+  } else if (Width == 100) {
     BarraDeExp.style.width = `${Width}%`;
     setTimeout(() => { BarraDeExp.style.width = 0; }, 100);
     Width = 0;
